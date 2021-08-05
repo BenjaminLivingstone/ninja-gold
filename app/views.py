@@ -1,12 +1,17 @@
 from django.shortcuts import render, redirect
 from random import *
+from datetime import datetime
+from django.utils import timezone
+
+
 
 def ninja(request):
-    context ={
-        "name": "farm",
-        "gold": 0,
-    }
-    return render(request,'index.html', context)
+    # context ={
+    #     # "name": "farm",
+    #     "gold": 0,
+    #     "output":[]
+    # }
+    return render(request,'index.html')
 
 def money(request, name):
     if 'gold' in request.session:
@@ -14,11 +19,18 @@ def money(request, name):
         if name=='farm':
             request.session['gold']=request.session['gold']+randrange(10,20)
         if name=='cave':
-            request.session['gold']=request.session['gold']+10
+            request.session['gold']=request.session['gold']+randrange(5,10)
         if name=='house':
-            request.session['gold']=request.session['gold']+20
+            request.session['gold']=request.session['gold']+randrange(2,5)
         if name=='casino':
-            request.session['gold']=request.session['gold']+100                               
+            random=randrange(-50,50)
+            request.session['gold']=request.session['gold']+random
+            if random > 0: 
+                request.session['output'].append({'text': f"Earned {random} gold from the casino, {datetime.now()} ",'color': "text-primary"})
+                request.session.save()
+            else: 
+                request.session['output'].append({'text': f"Entered a casino and lost {random} gold... Ouch.., {timezone.now()}  ",'color': "text-danger"})
+                request.session.save()              
         # if request.POST['game']=='farm':
         #     pass
         # if request.POST['gold']=='cave':
@@ -29,10 +41,12 @@ def money(request, name):
         #     pass
     else:
         request.session['gold']=0
+        request.session['output']=[]
     return redirect("/")
 
 def reset(request):
     request.session['gold']=0
+    request.session['output']=[]
     return redirect("/")
 
 # import random
