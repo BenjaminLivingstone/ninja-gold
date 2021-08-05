@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from random import *
 from datetime import datetime
-from django.utils import timezone
 
 
 
@@ -17,11 +16,17 @@ def money(request, name):
     if 'gold' in request.session:
         # request.session['gold']=request.session['gold']+5
         if name=='farm':
-            request.session['gold']=request.session['gold']+randrange(10,20)
+            random=randrange(10,20)
+            request.session['gold']=request.session['gold']+random
+            request.session['output'].append({'text': f"Earned {random} gold from the farm, {datetime.now()} ",'color': "text-primary"})
         if name=='cave':
-            request.session['gold']=request.session['gold']+randrange(5,10)
+            random=randrange(5,10)           
+            request.session['gold']=request.session['gold']+random
+            request.session['output'].append({'text': f"Earned {random} gold from the cave, {datetime.now()} ",'color': "text-primary"})
         if name=='house':
-            request.session['gold']=request.session['gold']+randrange(2,5)
+            random=randrange(2,5)
+            request.session['gold']=request.session['gold']+random
+            request.session['output'].append({'text': f"Earned {random} gold from the farm, {datetime.now()} ",'color': "text-primary"})        
         if name=='casino':
             random=randrange(-50,50)
             request.session['gold']=request.session['gold']+random
@@ -29,7 +34,7 @@ def money(request, name):
                 request.session['output'].append({'text': f"Earned {random} gold from the casino, {datetime.now()} ",'color': "text-primary"})
                 request.session.save()
             else: 
-                request.session['output'].append({'text': f"Entered a casino and lost {random} gold... Ouch.., {timezone.now()}  ",'color': "text-danger"})
+                request.session['output'].append({'text': f"Entered a casino and lost {random} gold... Ouch.., {datetime.now()}",'color': "text-danger"})
                 request.session.save()              
         # if request.POST['game']=='farm':
         #     pass
