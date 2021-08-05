@@ -51,6 +51,10 @@
                 font-size: 3.5rem;
             }
         }
+        
+        .textbox {
+            max-height: 320px;
+        }
     </style>
 
 
@@ -59,7 +63,7 @@
 <body>
 
     <main>
-        <section class="py-4 text-center container">
+        <section class="py-2 text-center container">
             <div class="row py-lg-1">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="">Ninja Gold</h1>
@@ -79,12 +83,12 @@
                         <div class="card shadow-sm">
 
                             <!-- <img src="{% static 'img/farm.jpg' %}" class="card-img-top" alt="..."> -->
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Farm</text></svg>
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Farm</text></svg> -->
                             <div class="card-body text-center">
                                 <h5 class="card-text ">Farm</h5>
                                 <p class="card-text">Earns 10-20 gold</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="/process_money/farm" class="btn btn-danger my-2">Try Your Luck</a>
+                                    <a href="/process_money/farm" class="btn btn-danger m-auto">Try Your Luck</a>
                                     <!-- <form action="/" method="post">
                                         {% csrf_token %}
                                         <input type="hidden" name='game' value='farm'>
@@ -96,36 +100,36 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Cave</text></svg>
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Cave</text></svg> -->
                             <div class="card-body text-center">
                                 <h5 class="card-text">Cave</h5>
                                 <p class="card-text">Earns 5-10 gold</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="/process_money/cave" class="btn btn-danger my-2">Try Your Luck</a>
+                                    <a href="/process_money/cave" class="btn btn-danger m-auto">Try Your Luck</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">House</text></svg>
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">House</text></svg> -->
                             <div class="card-body text-center">
                                 <h5 class="card-text ">House</h5>
                                 <p class="card-text">Earns 2-5 Gold</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="/process_money/house" class="btn btn-danger my-2">Try Your Luck</a>
+                                    <a href="/process_money/house" class="btn btn-danger m-auto">Try Your Luck</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Casino</text></svg>
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Casino</text></svg> -->
                             <div class="card-body text-center">
                                 <h5 class="card-text">Casino</h5>
                                 <p class="card-text">Earns/Takes 0-50 gold</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <a href="/process_money/casino" class="btn btn-danger my-2">Try Your Luck</a>
+                                    <a href="/process_money/casino" class="btn btn-danger m-auto">Try Your Luck</a>
                                 </div>
                             </div>
                         </div>
@@ -133,11 +137,18 @@
                 </div>
             </div>
         </div>
-        <div class="overflow-scroll text-center">
-            {%for output in request.session.output%}
-            <p class={{output.color}}>{{output.text}}</p>
-            {%endfor%}
-        </div>
+
+        <section class="py-4 text-center container">
+            <div class="row py-lg-1">
+                <div class="col-lg-8 col-md-8 mx-auto overflow-auto textbox">
+                    <!-- <div class="overflow-scroll text-center"> -->
+                    {%for output in request.session.output%}
+                    <p class={{output.color}}>{{output.text}}</p>
+                    {%endfor%}
+                    <!-- </div> -->
+                </div>
+            </div>
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
